@@ -2,6 +2,27 @@
 
 为 CodeIgniter 框架扩展 RESTful API 的支持，RESTful 控制器基类。
 
+## 路由规则
+
+标准请求方法
+
+请求类型 | 路由规则 | 对应操作方法
+---|---|---
+GET | blog | index
+GET | blog/create | create
+POST | blog | save
+GET | blog/:id | read
+GET | blog/:id/edit | edit
+PUT | blog/:id | update
+DELETE | blog/:id | delete
+
+POST模拟PUT、GET模拟DELETE
+
+请求类型 | 路由规则 | 对应操作方法
+---|---|---
+POST | blog/:id/put | update
+GET | blog/:id/delete | delete
+
 ## 使用说明
 
 ### 第 1 步
@@ -13,7 +34,7 @@ MY_Controller.php
 REST_Controller.php
 ```
 
-> MY_Controller.php 的前缀要与 config.php 内的 subclass_prefix 配置项一至
+> MY_Controller.php 的前缀要与 config.php 内的 subclass_prefix 配置项一至。
 
 ### 第 2 步
 
