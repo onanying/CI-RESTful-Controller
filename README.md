@@ -40,7 +40,7 @@ REST_Controller.php
 
 按如下范例建立你的控制器：
 
-```
+```php
 class News extends REST_Controller
 {
 
