@@ -9,43 +9,43 @@ class News extends REST_Controller
 
     public function _index()
     {
-        echo 'index';
+        $this->response(['errcode' => 0, 'errmsg' => 'index']);
     }
 
     public function _create()
     {
-        echo 'create';
+        $this->response(['errcode' => 0, 'errmsg' => 'create']);
     }
 
     public function _save($data)
     {
-        echo 'save';
+        $this->response(['errcode' => 0, 'errmsg' => 'save', 'data' => $data]);
     }
 
     public function _read($id)
     {
-        echo 'read';
+        $this->response(['errcode' => 0, 'errmsg' => 'read', 'id' => $id]);
     }
 
     public function _edit($id)
     {
-        echo 'edit';
+        $this->response(['errcode' => 0, 'errmsg' => 'edit', 'id' => $id]);
     }
 
     public function _update($id, $data)
     {
-        echo 'update';
+        $this->response(['errcode' => 0, 'errmsg' => 'update', 'id' => $id, 'data' => $data]);
     }
 
     public function _delete($id)
     {
-        echo 'delete';
+        $this->response(['errcode' => 0, 'errmsg' => 'delete', 'id' => $id]);
     }
 
     // 析构
     public function __destruct()
     {
-    	// 回收PUT上传的临时文件
+        // 回收PUT上传的临时文件
         parent::__destruct();
     }
 

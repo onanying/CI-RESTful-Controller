@@ -10,6 +10,15 @@ class REST_Controller extends CI_Controller
     // PUT上传的文件信息
     private static $uploadFiles = [];
 
+    // 响应数据
+    public function response($data)
+    {
+        // 设置Content-Type
+        header('Content-Type:application/json;charset=utf-8');
+        // 不转义中文、斜杠
+        echo json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+    }
+
     // CI的重映射方法
     public function _remap()
     {
