@@ -22,7 +22,7 @@ class REST_Controller extends CI_Controller
             'update'      => ['/^\/([\w]+)\/([\w]+)$/', 'PUT'],
             'post_update' => ['/^\/([\w]+)\/([\w]+)\/put$/', 'POST'],
             'delete'      => ['/^\/([\w]+)\/([\w]+)$/', 'DELETE'],
-            'get_delete' => ['/^\/([\w]+)\/([\w]+)\/delete$/', 'POST'],
+            'post_delete' => ['/^\/([\w]+)\/([\w]+)\/delete$/', 'POST'],
         ];
         foreach ($patterns as $requestType => $value) {
             list($pattern, $method) = $value;
@@ -61,7 +61,7 @@ class REST_Controller extends CI_Controller
                         $id = $matches[2];
                         $this->_delete($id);
                         break;
-                    case 'get_delete':
+                    case 'post_delete':
                         $id = $matches[2];
                         $this->_delete($id);
                         break;
