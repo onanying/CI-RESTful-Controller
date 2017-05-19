@@ -16,12 +16,12 @@ GET | blog/:id/edit | edit
 PUT | blog/:id | update
 DELETE | blog/:id | delete
 
-POST模拟PUT、GET模拟DELETE
+POST模拟PUT/DELETE
 
 请求类型 | 路由规则 | 对应操作方法
 ---|---|---
 POST | blog/:id/put | update
-GET | blog/:id/delete | delete
+POST | blog/:id/delete | delete
 
 ## 使用说明
 
